@@ -1,0 +1,187 @@
+*{
+	margin: 0px;
+}
+body{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(45deg,rgba(156, 135, 216, 0.67),rgba(210, 137, 180, 0.5),rgba(217, 218, 140, 0.9));
+}
+
+
+.container {
+	position:absolute;
+	z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #d2c2ea;
+  text-align: center;
+}
+a{
+	margin-top: 8%; 
+}
+
+.container h1{
+	margin-top: 40px;
+	font-family: 'Playfair Display', serif;
+  	text-transform: lowercase;
+  	color: rgb(61, 43, 104);
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.circle {
+  stroke: #f8aa28;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.playBut {
+  /*  border: 1px solid red;*/
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+}
+.playBut .triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #000;
+  transform: translateY(0);
+}
+.playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #8d52e5;
+  animation: nudge 0.7s ease-in-out;
+}
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.playBut:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+
+#game_div{
+	margin-top: 28px;
+	width: 460px;
+	height: 450px;
+	background-color:rgb(186, 172, 159);	
+	padding: 10px;
+	border-radius: 5px;
+	border:10px solid white;
+	opacity: 0.97;
+}
+
+button{
+	position: absolute;
+	margin:auto;
+	font-size: 2rem;
+	color:rgb(61, 35, 18);
+	font-family: -webkit-pictograph, sans-serif;
+	text-shadow:2px 2px 1px white;
+	background: rgb(186, 172, 159);
+	padding:5px;
+	padding-left: 20px;
+	padding-right: 30px; 
+	border:none;
+	margin-left: 100px;
+}
+#user_score,#high_score{
+	margin-top: 30px;
+	display: block;
+
+	font-size: 2rem;
+	color:rgb(186, 172, 159);
+	background-color: rgb(61, 35, 18);
+	color:white;
+	text-align: center;
+}
+#high_score{
+	margin-top:0px;
+}
+.tile{
+	height: 90px;
+	width: 90px;
+	line-height: 90px;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	margin:10px;
+	background-color:rgb(205, 193, 181);
+	border-radius: 2px;
+	font-size:2.5rem;
+	font-family: sans-serif;
+	font-style: bold;
+		
+}
+.zero{
+	background-color:rgb(205, 193, 181);
+	color:rgb(205, 193, 181);
+}
+.two{
+	background-color: rgb(238, 228, 218);
+	color:rgb(116, 101, 91);
+}
+.four{
+	background-color: rgb(236, 224, 202);
+	color:rgb(122, 111, 102);
+}
+.eight{
+	background-color: rgb(242, 177, 121);
+	color:rgb(255,255,255);
+}
+.sixteen{
+	background-color: rgb(245, 149, 101);
+	color:rgb(255,255,255);
+}
+.thirtytwo{
+	background-color: rgb(245, 124, 95);
+	color:rgb(255,255,255);
+}
+.sixty4{
+	background-color: rgb(245, 92, 58);
+	color:rgb(255,255,255);
+}
+.one28{
+	background-color: rgb(242, 216, 106);
+	color:rgb(255,255,255);
+}
+.two56{
+	background-color: rgb(237, 203, 98);
+	color:rgb(255,255,255);
+}
+.five12{
+	background-color: rgb(228, 192, 42);
+	color:rgb(255,255,255);
+}
+.one024{
+	background-color: rgb(225, 182, 28);
+	color:rgb(255,255,255);
+}
+.two048{
+	background-color: rgb(236, 196, 0);
+	color:rgb(255,255,255);
+}
+.biggerValues{
+	background-color: rgb(236, 196, 0);
+	color:rgb(255,255,255);
+}
